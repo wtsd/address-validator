@@ -1,17 +1,27 @@
 # address-validator
 
 ## INSTALLATION
-1. Install the required modules:
+1. Clone repository
+2. Install the required modules:
 
 ```
 pip install -r requirements.txt
 ```
 
-2. Create a Google Cloud Platform project and get an API key for Maps: https://console.cloud.google.com/apis/credentials
+3. Create a Google Cloud Platform project and get an API key for Maps: https://console.cloud.google.com/apis/credentials (Pricing: https://mapsplatform.google.com/pricing/)
 
-3. Create a `config.py` file with your API key, title caption from the excel file, and excel file/path.
+4. Create `config.py` file:
+```
+$ cp config-example.py config.py
+```
+
+4. Edit `config.py` with your API key, title caption (name of your column in Excel — exact match), and excel file(s) directory.
 
 ## USAGE
+
+Clone repository.
+Create `config.py` file and edit your key
+Copy your Excel files to `xlsx` directory.
 Run in console:
 
 ```
