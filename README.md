@@ -32,10 +32,8 @@ python setup.py
 
 ## USAGE
 
-Clone repository.
-Create `config.py` file and edit your key
-Copy your Excel files to `xlsx` directory.
-Run in console:
+1. Copy your Excel files to `xlsx` directory.
+2. Run in console:
 
 ```
 python validate-address.py
