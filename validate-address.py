@@ -65,7 +65,7 @@ def main():
         
         # Create a new filename with timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        new_file_name = f"{os.path.splitext(file_name)[0]}_{timestamp}.xlsx"
+        new_file_name = f"{os.path.splitext(file_name)[0]}_validated_{timestamp}.xlsx"
         new_file_path = os.path.join(FOLDER_PATH, new_file_name)
         
         result_df.to_excel(new_file_path, index=False)
