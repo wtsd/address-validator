@@ -1,4 +1,6 @@
+.git
 config.py
 __pycache__
 ~*
 *.xlsx
+xlsx/*
