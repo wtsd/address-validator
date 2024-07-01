@@ -1,6 +1,8 @@
 # address-validator
 
 ## INSTALLATION
+
+### Option 1
 1. Clone repository
 2. Install the required modules:
 
@@ -18,6 +20,8 @@ cp config-example.py config.py
 4. Edit `config.py` with your API key, title caption (name of your column in Excel — exact match), and excel file(s) directory.
 
 OR
+
+### Option 2
 
 1. Clone repository
 
