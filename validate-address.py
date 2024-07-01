@@ -12,6 +12,16 @@ FOLDER_PATH = config.FOLDER_PATH
 # Initialize the Google Maps client
 gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 
+# Check Google Maps API key authorization
+def check_google_maps_api_key(api_key):
+    try:
+        # Perform a simple request to check if the API key is valid
+        gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
+        print("Google Maps API key authorized successfully.")
+    except googlemaps.exceptions.ApiError as e:
+        print(f"Google Maps API key authorization failed: {e}")
+        exit(1)
+
 # Function to validate address with Google Maps
 def validate_with_google(address):
     try:
@@ -38,6 +48,8 @@ def load_addresses_from_excel(file_path):
 
 # Main function to validate addresses in all Excel files within a folder
 def main():
+    check_google_maps_api_key(GOOGLE_MAPS_API_KEY)
+
     if not os.path.exists(FOLDER_PATH):
         print(f"Folder '{FOLDER_PATH}' does not exist.")
         return
